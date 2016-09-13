@@ -1,0 +1,21 @@
+<h1>CD Organizer!</h1>
+
+#if ($cds)
+  <ul>
+    #foreach ($cd in $cds)
+      <li>$cd.getArtist(), $cd.getTitle()</li>
+    #end
+  </ul>
+#else
+  <p>No CDs!</p>
+#end
+
+<p>Add a new CD:</p>
+
+<form action="/cds" method="post">
+  <label for="artist">Name of artist</label>
+  <input id="artist" name="artist" type="text">
+  <label for="title">Name of album</label>
+  <input id="title" name="title" type="text">
+  <button type="submit" class="btn btn-default">Add CD</button>
+</form>
