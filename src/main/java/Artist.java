@@ -19,6 +19,9 @@ public class Artist {
   }
 
   public static ArrayList<Artist> all() {
+    if(instances.size() == 0){
+      return null;
+    }
    return instances;
   }
 

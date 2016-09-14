@@ -1,9 +1,13 @@
 <h1>Results</h1>
-
+#set( $found = "false" )
 #foreach ($findArtist in $artist)
   #foreach ($findCd in $findArtist.getCds())
     #if ($search.equals($findCd.getTitle()))
       <li><a href="/artists/$findArtist.getId()">$findCd.getArtist()'s album $findCd.getTitle()</a></li>
+      #set( $found = "true" )
     #end
   #end
+#end
+#if($found == "false")
+  <h3>No album exists!</h3>
 #end
