@@ -35,7 +35,11 @@ public class Cd {
   }
 
   public static Cd find(int id) {
-    return instances.get(id);
+    try {
+      return instances.get(id);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
   }
 
 }

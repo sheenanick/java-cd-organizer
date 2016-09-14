@@ -5,7 +5,7 @@ public class CdTest {
 
   @Test
   public void Cd_instantiatesCorrectly_true() {
-    Cd myCd = new Cd("Radiohead", "Okay Computer");
+    Cd myCd = new Cd("Okay Computer", "Radiohead");
     assertEquals(true, myCd instanceof Cd);
   }
 

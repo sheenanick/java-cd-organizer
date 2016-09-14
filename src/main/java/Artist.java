@@ -31,15 +31,21 @@ public class Artist {
   }
 
   public static Artist find(int id) {
-   return instances.get(id);
- }
+    try {
+      return instances.get(id);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
+  }
 
   public List<Cd> getCds() {
+    if(mCds.size() == 0){
+      return null;
+    }
     return mCds;
   }
 
   public void addCd(Cd cd) {
     mCds.add(cd);
   }
-
 }

@@ -1,0 +1,9 @@
+<h1>Results</h1>
+
+#foreach ($findArtist in $artist)
+  #foreach ($findCd in $findArtist.getCds())
+    #if ($search.equals($findCd.getTitle()))
+      <li><a href="/artists/$findArtist.getId()">$findCd.getArtist()'s album $findCd.getTitle()</a></li>
+    #end
+  #end
+#end

@@ -5,3 +5,12 @@
   #end
 </ul>
 <a href="/artists/new">Add New Artist</a>
+
+<h4>Enter album name to search for album</h3>
+<form action="/cd/search" method="post">
+  <div class="form-group">
+    <label for="search">Name of album</label>
+    <input id="search" name="search" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success">Search</button>
+</form>
